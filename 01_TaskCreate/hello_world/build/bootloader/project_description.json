@@ -1,0 +1,21 @@
+{
+    "project_name":       "bootloader",
+    "project_path":       "D:/SDKs/esp/esp-idf/components/bootloader/subproject",
+    "build_dir":          "D:/workRoom/esp32/AirM2M_core_board/AirM2M_CORE_ESP32C3/01_TaskCreate/hello_world/build/bootloader",
+    "config_file":        "D:/workRoom/esp32/AirM2M_core_board/AirM2M_CORE_ESP32C3/01_TaskCreate/hello_world/sdkconfig",
+    "config_defaults":    "",
+    "app_elf":            "bootloader.elf",
+    "app_bin":            "bootloader.bin",
+    "git_revision":       "v4.4.1",
+    "target":             "esp32c3",
+    "rev":                "",
+    "phy_data_partition": "",
+    "monitor_baud" :      "115200",
+    "monitor_toolprefix": "riscv32-esp-elf-",
+    "config_environment" : {
+        "COMPONENT_KCONFIGS" : "D:/SDKs/esp/esp-idf/components/efuse/Kconfig;D:/SDKs/esp/esp-idf/components/esp32c3/Kconfig;D:/SDKs/esp/esp-idf/components/esp_common/Kconfig;D:/SDKs/esp/esp-idf/components/esp_hw_support/Kconfig;D:/SDKs/esp/esp-idf/components/esp_system/Kconfig;D:/SDKs/esp/esp-idf/components/freertos/Kconfig;D:/SDKs/esp/esp-idf/components/hal/Kconfig;D:/SDKs/esp/esp-idf/components/log/Kconfig;D:/SDKs/esp/esp-idf/components/newlib/Kconfig;D:/SDKs/esp/esp-idf/components/spi_flash/Kconfig",
+        "COMPONENT_KCONFIGS_PROJBUILD" : "D:/SDKs/esp/esp-idf/components/bootloader/Kconfig.projbuild;D:/SDKs/esp/esp-idf/components/esp_rom/Kconfig.projbuild;D:/SDKs/esp/esp-idf/components/esptool_py/Kconfig.projbuild;D:/SDKs/esp/esp-idf/components/partition_table/Kconfig.projbuild"
+    },
+    "build_components" : [ "bootloader", "bootloader_support", "efuse", "esp32c3", "esp_common", "esp_hw_support", "esp_rom", "esp_system", "esptool_py", "freertos", "hal", "log", "main", "micro-ecc", "newlib", "partition_table", "riscv", "soc", "spi_flash", "" ],
+    "build_component_paths" : [ "D:/SDKs/esp/esp-idf/components/bootloader", "D:/SDKs/esp/esp-idf/components/bootloader_support", "D:/SDKs/esp/esp-idf/components/efuse", "D:/SDKs/esp/esp-idf/components/esp32c3", "D:/SDKs/esp/esp-idf/components/esp_common", "D:/SDKs/esp/esp-idf/components/esp_hw_support", "D:/SDKs/esp/esp-idf/components/esp_rom", "D:/SDKs/esp/esp-idf/components/esp_system", "D:/SDKs/esp/esp-idf/components/esptool_py", "D:/SDKs/esp/esp-idf/components/freertos", "D:/SDKs/esp/esp-idf/components/hal", "D:/SDKs/esp/esp-idf/components/log", "D:/SDKs/esp/esp-idf/components/bootloader/subproject/main", "D:/SDKs/esp/esp-idf/components/bootloader/subproject/components/micro-ecc", "D:/SDKs/esp/esp-idf/components/newlib", "D:/SDKs/esp/esp-idf/components/partition_table", "D:/SDKs/esp/esp-idf/components/riscv", "D:/SDKs/esp/esp-idf/components/soc", "D:/SDKs/esp/esp-idf/components/spi_flash", "" ]
+}
