@@ -17,9 +17,24 @@
  * @brief new Init task
  *
  */
+void myTask1(void *pvParam)
+{
+    while (1)
+    {
+        printf("Task 111!\n");
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
+    }
+
+    vTaskDelete(NULL);
+}
+
+/**
+ * @brief new Init task
+ *
+ */
 void PlatformInitTask(void *pvParam)
 {
-    //while (1)
+    while (1)
     {
         printf("Init Task test!\n");
         vTaskDelay(1000 / portTICK_PERIOD_MS);
@@ -33,12 +48,15 @@ void app_main(void)
     // printf("Hello world!\n");
 
     UBaseType_t iPriority = 0;
-    TaskHandle_t pxTask = NULL;
 
-    // TaskHandle_t mInitTaskHdl = NULL;
-    xTaskCreate(PlatformInitTask, "PlatformInitTask", 1024, NULL, 1, &pxTask/* &mInitTaskHdl */);
+    TaskHandle_t mInitTaskHdl = NULL;
+                /* 任务入口函数      字符串描述符        堆栈大小  传入参数  任务优先级  任务句柄 */
+    xTaskCreate(PlatformInitTask, "PlatformInitTask", 1024,    NULL,     1,        &mInitTaskHdl);
+    xTaskCreate(myTask1,          "myTask1",          1024,    NULL,     2,        NULL);
 
-    iPriority = uxTaskPriorityGet(pxTask);
+    vTaskPrioritySet(mInitTaskHdl, 3);
+
+    iPriority = uxTaskPriorityGet(mInitTaskHdl);
 
     printf("iPriority = %d\n",iPriority);
 }
